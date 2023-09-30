@@ -1,6 +1,6 @@
 return {
   'zbirenbaum/copilot.lua',
-  config = function ()
+  config = function()
     require('copilot').setup({
       panel = {
         enabled = true,
