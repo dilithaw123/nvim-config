@@ -11,9 +11,16 @@ vim.cmd('set background=light')
 --   end,
 -- }
 
+-- return {
+--   'nyoom-engineering/oxocarbon.nvim',
+--   config = function()
+--     vim.cmd([[ colorscheme oxocarbon ]])
+--   end,
+-- }
+
 return {
-  'nyoom-engineering/oxocarbon.nvim',
+  'rebelot/kanagawa.nvim',
   config = function()
-    vim.cmd([[ colorscheme oxocarbon ]])
+    vim.cmd([[ colorscheme kanagawa ]])
   end,
 }
