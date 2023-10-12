@@ -1,5 +1,4 @@
 -- vim.cmd([[ let g:zenbones_compat = 1 ]])
-vim.cmd('set background=light')
 
 -- return {
 --   'mcchrish/zenbones.nvim',
@@ -11,16 +10,17 @@ vim.cmd('set background=light')
 --   end,
 -- }
 
--- return {
---   'nyoom-engineering/oxocarbon.nvim',
---   config = function()
---     vim.cmd([[ colorscheme oxocarbon ]])
---   end,
--- }
-
 return {
-  'rebelot/kanagawa.nvim',
+  'nyoom-engineering/oxocarbon.nvim',
   config = function()
-    vim.cmd([[ colorscheme kanagawa ]])
+    vim.cmd('set background=dark')
+    vim.cmd([[ colorscheme oxocarbon ]])
   end,
 }
+
+-- return {
+--   'rebelot/kanagawa.nvim',
+--   config = function()
+--     vim.cmd([[ colorscheme kanagawa ]])
+--   end,
+-- }
