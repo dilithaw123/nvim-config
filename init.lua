@@ -220,7 +220,7 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', { silent = true })
 
 -- Remap for faster buffer manipulation
 vim.keymap.set('n', '<leader>bd', '<cmd>bd<bar>bp<CR>', { silent = true, desc = '[B]uffer [D]elete' })
-vim.keymap.set('n', '<leader>bD', '<cmd>bd!<CR>', { silent = true, desc = '[B]uffer [D]elete!' })
+vim.keymap.set('n', '<leader>bD', '<cmd>bd!<bar>bp<CR>', { silent = true, desc = '[B]uffer [D]elete!' })
 vim.keymap.set('n', '<leader>bn', '<cmd>bn<CR>', { silent = true, desc = '[B]uffer [N]ext' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bp<CR>', { silent = true, desc = '[B]uffer [P]revious' })
 
