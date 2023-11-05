@@ -13,7 +13,7 @@
 return {
   'nyoom-engineering/oxocarbon.nvim',
   config = function()
-    vim.cmd('set background=dark')
+    vim.cmd('set background=light')
     vim.cmd([[ colorscheme oxocarbon ]])
   end,
 }
