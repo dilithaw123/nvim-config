@@ -4,6 +4,9 @@ return {
     'nvim-tree/nvim-web-devicons',
   },
   config = function()
-    require('trouble').setup({})
-  end,
+    local trouble = require('trouble')
+    trouble.setup({})
+    vim.keymap.set("n", "<leader>xx", function() trouble.toggle() end,
+      { noremap = true, silent = true, desc = "Trouble" })
+  end
 }
