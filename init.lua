@@ -223,6 +223,9 @@ vim.keymap.set('n', '<leader>bd', '<cmd>bd<bar>bp<CR>', { silent = true, desc = 
 vim.keymap.set('n', '<leader>bD', '<cmd>bd!<bar>bp<CR>', { silent = true, desc = '[B]uffer [D]elete!' })
 vim.keymap.set('n', '<leader>bn', '<cmd>bn<CR>', { silent = true, desc = '[B]uffer [N]ext' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bp<CR>', { silent = true, desc = '[B]uffer [P]revious' })
+vim.keymap.set('n', '<M-.>', '<cmd>bn<CR>', { silent = true, desc = '[B]uffer [N]ext', noremap = true })
+vim.keymap.set('n', '<M-,>', '<cmd>bp<CR>', { silent = true, desc = '[B]uffer [P]revious', noremap = true })
+vim.keymap.set('n', '<M-/>', '<cmd>bd!<bar>bp<CR>', { silent = true, desc = '[B]uffer [P]revious', noremap = true })
 
 
 -- [[ Highlight on yank ]]
