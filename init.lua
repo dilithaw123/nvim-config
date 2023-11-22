@@ -226,7 +226,8 @@ vim.keymap.set('n', '<leader>bp', '<cmd>bp<CR>', { silent = true, desc = '[B]uff
 vim.keymap.set('n', '<M-.>', '<cmd>bn<CR>', { silent = true, desc = '[B]uffer [N]ext', noremap = true })
 vim.keymap.set('n', '<M-,>', '<cmd>bp<CR>', { silent = true, desc = '[B]uffer [P]revious', noremap = true })
 vim.keymap.set('n', '<M-;>', '<cmd>bd!<bar>bp<CR>', { silent = true, desc = '[B]uffer [P]revious', noremap = true })
-
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { silent = true, noremap = true })
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { silent = true, noremap = true })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
