@@ -1,26 +1,39 @@
--- vim.cmd([[ let g:zenbones_compat = 1 ]])
-
--- return {
---   'mcchrish/zenbones.nvim',
---   dependencies = {
---     'rktjmp/lush.nvim',
---   },
---   config = function()
---     vim.cmd([[ colorscheme zenbones ]])
---   end,
--- }
-
+-- return
 return {
-  'nyoom-engineering/oxocarbon.nvim',
-  config = function()
-    vim.cmd('set background=light')
-    vim.cmd([[ colorscheme oxocarbon ]])
-  end,
-}
+  {
+    'mcchrish/zenbones.nvim',
+    enabled = false,
+    dependencies = {
+      'rktjmp/lush.nvim',
+    },
+    config = function()
+      vim.cmd([[ let g:zenbones_compat = 1 ]])
+      vim.cmd([[ colorscheme zenbones ]])
+    end,
+  },
 
--- return {
---   'rebelot/kanagawa.nvim',
---   config = function()
---     vim.cmd([[ colorscheme kanagawa ]])
---   end,
--- }
+  {
+    'nyoom-engineering/oxocarbon.nvim',
+    enabled = false,
+    config = function()
+      vim.cmd('set background=light')
+      vim.cmd([[ colorscheme oxocarbon ]])
+    end,
+  },
+  {
+    'rebelot/kanagawa.nvim',
+    enabled = false,
+    config = function()
+      vim.cmd([[ colorscheme kanagawa ]])
+    end,
+  },
+  {
+    'Mofiqul/dracula.nvim',
+    enabled = true,
+    config = function()
+      vim.cmd [[colorscheme dracula]]
+    end,
+  }
+
+
+}
