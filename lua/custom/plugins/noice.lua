@@ -11,5 +11,42 @@ return {
     --   `nvim-notify` is only needed, if you want to use the notification view.
     --   If not available, we use `mini` as the fallback
     "rcarriga/nvim-notify",
-  }
+  },
+  config = function()
+    require("noice").setup({
+      presets = {
+        lsp_doc_border = true,
+      },
+      views = {
+        cmdline_popup = {
+          position = {
+            row = "40%",
+            col = "50%",
+          },
+          size = {
+            width = 60,
+            height = "2%",
+          },
+        },
+        popupmenu = {
+          relative = "editor",
+          position = {
+            row = "48%",
+            col = "50%",
+          },
+          size = {
+            width = 60,
+            height = 10,
+          },
+          border = {
+            style = "rounded",
+            padding = { 0, 1 },
+          },
+          win_options = {
+            winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
+          },
+        },
+      },
+    })
+  end,
 }
