@@ -229,7 +229,7 @@ vim.keymap.set('n', '<M-;>', '<cmd>bd!<bar>bp<CR>', { silent = true, desc = '[B]
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { silent = true, noremap = true })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { silent = true, noremap = true })
 vim.keymap.set({ 'n', 'v', 'i' }, '<S-BS>', '<Esc>', { silent = true, noremap = true })
-
+vim.keymap.set('t', '<S-BS>', '<C-\\><C-n>', { silent = true, noremap = true })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
