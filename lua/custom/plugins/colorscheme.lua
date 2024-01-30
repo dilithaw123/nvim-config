@@ -29,7 +29,7 @@ return {
   },
   {
     'Mofiqul/dracula.nvim',
-    enabled = false,
+    enabled = true,
     config = function()
       vim.cmd [[colorscheme dracula]]
     end,
@@ -37,7 +37,7 @@ return {
   {
     'rose-pine/neovim',
     name = 'rose-pine',
-    enabled = true,
+    enabled = false,
     config = function()
       require('rose-pine').setup({
         variant = 'moon',
