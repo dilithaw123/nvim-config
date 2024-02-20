@@ -1,8 +1,7 @@
--- return
 return {
   {
     'mcchrish/zenbones.nvim',
-    enabled = false,
+    enabled = true,
     dependencies = {
       'rktjmp/lush.nvim',
     },
@@ -11,7 +10,6 @@ return {
       vim.cmd([[ colorscheme zenbones ]])
     end,
   },
-
   {
     'nyoom-engineering/oxocarbon.nvim',
     enabled = false,
@@ -29,7 +27,7 @@ return {
   },
   {
     'Mofiqul/dracula.nvim',
-    enabled = true,
+    enabled = false,
     config = function()
       vim.cmd [[colorscheme dracula]]
     end,
@@ -46,6 +44,4 @@ return {
       vim.cmd('colorscheme rose-pine')
     end,
   }
-
-
 }
