@@ -1,20 +1,20 @@
 return {
   'stevearc/conform.nvim',
   opts = {},
-  event = 'BufRead',
+  event = 'BufReadPre',
   config = function()
-    local conform = require('conform')
-    conform.setup({
+    local conform = require 'conform'
+    conform.setup {
       formatters_by_ft = {
         lua = { 'stylua' },
         javascript = { 'prettierd' },
         typescript = { 'prettierd' },
-        go = { 'gofumpt', 'goimports' },
+        go = { 'goimports', 'gofumpt', 'golines' },
       },
       format_on_save = {
         timeout_ms = 500,
         lsp_fallback = true,
-      }
-    })
+      },
+    }
   end,
 }

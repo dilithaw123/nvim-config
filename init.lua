@@ -559,7 +559,6 @@ local servers = {
   rust_analyzer = {},
   tsserver = {},
   html = { filetypes = { 'html' } },
-
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
@@ -567,7 +566,6 @@ local servers = {
     },
   },
 }
-
 -- Setup neovim lua configuration
 require('neodev').setup()
 
