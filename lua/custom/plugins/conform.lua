@@ -10,6 +10,7 @@ return {
         javascript = { 'prettierd' },
         typescript = { 'prettierd' },
         go = { 'goimports', 'gofumpt', 'golines' },
+        yaml = { 'yamlfmt' },
       },
       format_on_save = {
         timeout_ms = 500,

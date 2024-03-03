@@ -45,11 +45,10 @@ require('lazy').setup({
       -- Automatically install LSPs to stdpath for neovim
       { 'williamboman/mason.nvim', config = true },
       'williamboman/mason-lspconfig.nvim',
-
+      'WhoIsSethDaniel/mason-tool-installer.nvim',
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim',       opts = {} },
-
+      { 'j-hui/fidget.nvim', opts = {} },
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
     },
@@ -84,7 +83,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim',   opts = {} },
+  { 'folke/which-key.nvim', opts = {} },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -186,7 +185,7 @@ require('lazy').setup({
   {
     'numToStr/Comment.nvim',
     event = 'BufRead',
-    opts = {}
+    opts = {},
   },
 
   -- Fuzzy Finder (files, lsp, etc)
@@ -275,7 +274,7 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
-vim.o.background = "dark"
+vim.o.background = 'dark'
 
 -- [[ Basic Keymaps ]]
 
@@ -322,7 +321,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
-local actions = require('telescope.actions')
+local actions = require 'telescope.actions'
 require('telescope').setup {
   defaults = {
     mappings = {
@@ -402,7 +401,6 @@ vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by 
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
 vim.keymap.set('n', '<leader>st', '<cmd>TodoTelescope<CR>', { desc = '[S]earch [T]odos' })
-
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
@@ -553,9 +551,7 @@ require('mason-lspconfig').setup()
 --  If you want to override the default filetypes that your language server will attach to you can
 --  define the property 'filetypes' to the map in question.
 local servers = {
-  gopls = {
-
-  },
+  gopls = {},
   rust_analyzer = {},
   tsserver = {},
   html = { filetypes = { 'html' } },
@@ -582,7 +578,7 @@ mason_lspconfig.setup {
 
 mason_lspconfig.setup_handlers {
   function(server_name)
-    local lspconfig = require("lspconfig")
+    local lspconfig = require 'lspconfig'
     lspconfig[server_name].setup {
       capabilities = capabilities,
       on_attach = on_attach,
@@ -590,6 +586,17 @@ mason_lspconfig.setup_handlers {
       filetypes = (servers[server_name] or {}).filetypes,
     }
   end,
+}
+
+require('mason-tool-installer').setup {
+  ensure_installed = {
+    'gofumpt',
+    'golines',
+    'goimports',
+    'prettierd',
+    'stylua',
+    'yamlfmt',
+  },
 }
 
 -- [[ Configure nvim-cmp ]]
