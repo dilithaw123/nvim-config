@@ -561,6 +561,7 @@ local servers = {
       telemetry = { enable = false },
     },
   },
+  pyright = {},
 }
 -- Setup neovim lua configuration
 require('neodev').setup()
@@ -596,6 +597,7 @@ require('mason-tool-installer').setup {
     'prettierd',
     'stylua',
     'yamlfmt',
+    'black',
   },
 }
 

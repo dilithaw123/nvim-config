@@ -11,6 +11,7 @@ return {
         typescript = { 'prettierd' },
         go = { 'goimports', 'gofumpt', 'golines' },
         yaml = { 'yamlfmt' },
+        python = { 'black' },
       },
       format_on_save = {
         timeout_ms = 500,
