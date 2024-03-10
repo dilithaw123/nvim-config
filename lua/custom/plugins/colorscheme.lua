@@ -12,7 +12,7 @@ return {
   },
   {
     'nyoom-engineering/oxocarbon.nvim',
-    enabled = true,
+    enabled = false,
     config = function()
       vim.cmd 'set background=dark'
       vim.cmd [[ colorscheme oxocarbon ]]
@@ -42,6 +42,13 @@ return {
         disable_italics = true,
       }
       vim.cmd 'colorscheme rose-pine'
+    end,
+  },
+  {
+    'EdenEast/nightfox.nvim',
+    enabled = true,
+    config = function()
+      vim.cmd 'colorscheme dawnfox'
     end,
   },
 }
