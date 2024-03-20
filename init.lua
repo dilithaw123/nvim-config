@@ -307,7 +307,7 @@ vim.keymap.set('n', '<C-,>', '<cmd>bp<CR>', { silent = true, desc = '[B]uffer [P
 vim.keymap.set('n', '<C-;>', '<cmd>bd!<bar>bp<CR>', { silent = true, desc = '[B]uffer [P]revious', noremap = true })
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { silent = true, noremap = true })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { silent = true, noremap = true })
-vim.keymap.set({ 'n', 'v', 'i', 't' }, '<S-BS>', '<Esc>', { silent = true, noremap = true })
+vim.keymap.set({ 'n', 'v', 'i' }, '<C-c>', '<Esc>', { silent = true, noremap = true })
 vim.keymap.set('t', '<S-BS>', '<C-\\><C-n>', { silent = true, noremap = true })
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`

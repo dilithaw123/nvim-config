@@ -46,9 +46,16 @@ return {
   },
   {
     'EdenEast/nightfox.nvim',
-    enabled = true,
+    enabled = false,
     config = function()
       vim.cmd 'colorscheme dawnfox'
+    end,
+  },
+  {
+    'arcticicestudio/nord-vim',
+    enabled = true,
+    config = function()
+      vim.cmd 'colorscheme nord'
     end,
   },
 }
