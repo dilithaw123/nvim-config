@@ -53,9 +53,18 @@ return {
   },
   {
     'arcticicestudio/nord-vim',
-    enabled = true,
+    enabled = false,
     config = function()
       vim.cmd 'colorscheme nord'
+    end,
+  },
+  {
+    'Verf/deepwhite.nvim',
+    enabled = true,
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd [[colorscheme deepwhite]]
     end,
   },
 }
