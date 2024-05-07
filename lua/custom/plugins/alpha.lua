@@ -24,6 +24,7 @@ return {
       dashboard.button('n', '  New file', ':ene <BAR> startinsert <CR>'),
       dashboard.button('f', '  Find file', ':Telescope find_files<CR>'),
       dashboard.button('l', '󰒲  Lazy', ':Lazy<CR>'),
+      dashboard.button('g', '󰊢  Git', ':LazyGit<CR>'),
       dashboard.button('m', '  Mason', ':Mason<CR>'),
       dashboard.button('c', '  Close', ':Alpha<CR>'),
       dashboard.button('q', '󰅚  Quit NVIM', ':qa!<CR>'),
