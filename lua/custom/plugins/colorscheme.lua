@@ -22,7 +22,7 @@ return {
     'rebelot/kanagawa.nvim',
     enabled = false,
     config = function()
-      vim.cmd [[ colorscheme kanagawa ]]
+      vim.cmd ' colorscheme kanagawa-lotus '
     end,
   },
   {
@@ -60,11 +60,31 @@ return {
   },
   {
     'Verf/deepwhite.nvim',
-    enabled = true,
+    enabled = false,
     lazy = false,
     priority = 1000,
     config = function()
       vim.cmd [[colorscheme deepwhite]]
+    end,
+  },
+  {
+    'uloco/bluloco.nvim',
+    lazy = false,
+    enabled = false,
+    dependencies = { 'rktjmp/lush.nvim' },
+    config = function()
+      require('bluloco').setup {
+        style = 'light',
+      }
+      vim.cmd 'colorscheme bluloco'
+    end,
+  },
+  {
+    'sainnhe/everforest',
+    enabled = true,
+    config = function()
+      vim.g.everforest_background = 'hard'
+      vim.cmd 'colorscheme everforest'
     end,
   },
 }
