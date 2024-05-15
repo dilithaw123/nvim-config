@@ -68,18 +68,6 @@ return {
     end,
   },
   {
-    'uloco/bluloco.nvim',
-    lazy = false,
-    enabled = false,
-    dependencies = { 'rktjmp/lush.nvim' },
-    config = function()
-      require('bluloco').setup {
-        style = 'light',
-      }
-      vim.cmd 'colorscheme bluloco'
-    end,
-  },
-  {
     'sainnhe/everforest',
     enabled = true,
     config = function()
