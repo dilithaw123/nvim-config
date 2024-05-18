@@ -184,13 +184,6 @@ require('lazy').setup({
     opts = {},
   },
 
-  -- "gc" to comment visual regions/lines
-  {
-    'numToStr/Comment.nvim',
-    event = 'BufRead',
-    opts = {},
-  },
-
   -- Fuzzy Finder (files, lsp, etc)
   {
     'nvim-telescope/telescope.nvim',
@@ -247,6 +240,7 @@ vim.o.hlsearch = false
 vim.wo.relativenumber = true
 vim.wo.number = true
 
+vim.opt.cursorline = true
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
