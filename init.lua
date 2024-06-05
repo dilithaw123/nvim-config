@@ -296,8 +296,8 @@ vim.keymap.set('n', '<leader>bd', '<cmd>bd<bar>bp<CR>', { silent = true, desc = 
 vim.keymap.set('n', '<leader>bD', '<cmd>bd!<bar>bp<CR>', { silent = true, desc = '[B]uffer [D]elete!' })
 vim.keymap.set('n', '<leader>bn', '<cmd>bn<CR>', { silent = true, desc = '[B]uffer [N]ext' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bp<CR>', { silent = true, desc = '[B]uffer [P]revious' })
-vim.keymap.set('n', '<C-.>', '<cmd>bn<CR>', { silent = true, desc = '[B]uffer [N]ext', noremap = true })
-vim.keymap.set('n', '<C-,>', '<cmd>bp<CR>', { silent = true, desc = '[B]uffer [P]revious', noremap = true })
+vim.keymap.set('n', '<leader>.', '<cmd>bn<CR>', { silent = true, desc = '[B]uffer [N]ext', noremap = true })
+vim.keymap.set('n', '<leader>,', '<cmd>bp<CR>', { silent = true, desc = '[B]uffer [P]revious', noremap = true })
 vim.keymap.set('n', '<C-;>', '<cmd>bd!<bar>bp<CR>', { silent = true, desc = '[B]uffer [P]revious', noremap = true })
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { silent = true, noremap = true })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { silent = true, noremap = true })
@@ -403,7 +403,25 @@ vim.keymap.set('n', '<leader>st', '<cmd>TodoTelescope<CR>', { desc = '[S]earch [
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'zig', 'sql', 'gleam' },
+    ensure_installed = {
+      'c',
+      'cpp',
+      'go',
+      'lua',
+      'python',
+      'rust',
+      'tsx',
+      'javascript',
+      'typescript',
+      'vimdoc',
+      'vim',
+      'bash',
+      'zig',
+      'sql',
+      'gleam',
+      'terraform',
+      'html',
+    },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
@@ -545,6 +563,7 @@ local mason_servers = {
       telemetry = { enable = false },
     },
   },
+  terraformls = {},
 }
 
 require('neodev').setup()

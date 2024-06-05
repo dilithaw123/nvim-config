@@ -69,7 +69,7 @@ return {
   },
   {
     'sainnhe/everforest',
-    enabled = false,
+    enabled = true,
     config = function()
       vim.g.everforest_background = 'hard'
       vim.cmd 'colorscheme everforest'
@@ -78,6 +78,7 @@ return {
   {
     'diegoulloao/neofusion.nvim',
     priority = 1000,
+    enabled = false,
     config = function()
       require('neofusion').setup {}
       vim.cmd 'set background=dark'
