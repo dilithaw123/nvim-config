@@ -1,6 +1,5 @@
 return {
   'akinsho/bufferline.nvim',
-  commit = '73540cb',
   dependencies = 'nvim-tree/nvim-web-devicons',
   event = 'BufWinEnter',
   config = function()
