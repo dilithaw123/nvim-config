@@ -551,6 +551,22 @@ require('which-key').register({
 }, { mode = 'v' })
 
 require('mason').setup()
+
+require('mason-tool-installer').setup {
+  ensure_installed = {
+    'gofumpt',
+    'golines',
+    'goimports',
+    'prettierd',
+    'eslint_d',
+    'golangci-lint',
+    'stylua',
+    'yamlfmt',
+    'rust-analyzer',
+    'lua_ls',
+  },
+}
+
 require('mason-lspconfig').setup()
 local mason_servers = {
   gopls = {},
@@ -590,17 +606,6 @@ mason_lspconfig.setup_handlers {
   end,
 }
 require('lspconfig').gleam.setup {}
-
-require('mason-tool-installer').setup {
-  ensure_installed = {
-    'gofumpt',
-    'golines',
-    'goimports',
-    'prettierd',
-    'stylua',
-    'yamlfmt',
-  },
-}
 
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`

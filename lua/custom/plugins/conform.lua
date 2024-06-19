@@ -9,6 +9,7 @@ return {
         lua = { 'stylua' },
         javascript = { 'prettierd' },
         typescript = { 'prettierd' },
+        html = { 'prettierd' },
         go = { 'goimports', 'gofumpt', 'golines' },
         yaml = { 'yamlfmt' },
         python = { 'black' },
