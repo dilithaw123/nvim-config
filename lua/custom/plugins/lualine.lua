@@ -14,6 +14,10 @@ return {
       lualine_a = {
         {
           'buffers',
+          buffers_color = {
+            active = { fg = '#9de3e3', bg = '#2d7d7d' },
+            inactive = { fg = '#9de3e3', bg = '#1e5959' },
+          },
           symbols = {
             alternate_file = '',
           },
