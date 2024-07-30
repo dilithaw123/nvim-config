@@ -397,9 +397,9 @@ vim.defer_fn(function()
       'bash',
       'zig',
       'sql',
-      'gleam',
       'terraform',
       'html',
+      'c_sharp',
     },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
@@ -539,6 +539,7 @@ require('mason').setup()
 
 require('mason-tool-installer').setup {
   ensure_installed = {
+    'gopls',
     'gofumpt',
     'golines',
     'goimports',
@@ -549,6 +550,12 @@ require('mason-tool-installer').setup {
     'yamlfmt',
     'rust-analyzer',
     'lua_ls',
+    'omnisharp',
+    'rust_analyzer',
+    'tsserver',
+    'html',
+    'lua_ls',
+    'terraformls',
   },
 }
 
@@ -590,7 +597,6 @@ mason_lspconfig.setup_handlers {
     }
   end,
 }
-require('lspconfig').gleam.setup {}
 
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
