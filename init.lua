@@ -558,6 +558,8 @@ require('mason-tool-installer').setup {
     'html',
     'lua_ls',
     'terraformls',
+    'ols',
+    'clangd',
   },
 }
 
@@ -574,6 +576,8 @@ local mason_servers = {
     },
   },
   terraformls = {},
+  ols = {},
+  clangd = {},
 }
 
 require('neodev').setup()
