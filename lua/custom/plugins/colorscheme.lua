@@ -12,7 +12,7 @@ return {
   },
   {
     'nyoom-engineering/oxocarbon.nvim',
-    enabled = false,
+    enabled = true,
     config = function()
       vim.cmd 'set background=dark'
       vim.cmd [[ colorscheme oxocarbon ]]
@@ -77,7 +77,7 @@ return {
   },
   {
     'ab-dx/ares.nvim',
-    enabled = true,
+    enabled = false,
     dependencies = {
       'rktjmp/lush.nvim',
     },

@@ -554,7 +554,7 @@ require('mason-tool-installer').setup {
     'lua_ls',
     'omnisharp',
     'rust_analyzer',
-    'tsserver',
+    'ts_ls',
     'html',
     'lua_ls',
     'terraformls',
@@ -567,7 +567,7 @@ require('mason-lspconfig').setup()
 local mason_servers = {
   gopls = {},
   rust_analyzer = {},
-  tsserver = {},
+  ts_ls = {},
   html = { filetypes = { 'html' } },
   lua_ls = {
     Lua = {
