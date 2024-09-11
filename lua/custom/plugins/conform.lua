@@ -12,6 +12,7 @@ return {
         go = { 'goimports', 'gofumpt', 'golines' },
         yaml = { 'yamlfmt' },
         python = { 'black' },
+        markdown = { 'prettierd' },
       },
       format_on_save = {
         timeout_ms = 500,

@@ -402,6 +402,7 @@ vim.defer_fn(function()
       'terraform',
       'html',
       'c_sharp',
+      'markdown',
     },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
